@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celum · Smartphones novos e multimarcas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">Celum</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav">
+          <a href="#catalogo">Catálogo</a>
+          <a href="#ia">Encontre o ideal</a>
+        </nav>
+        <!-- Área de autenticação (Clerk). Conteúdo controlado por auth.js -->
+        <div class="auth" id="auth">
+          <button class="btn btn-primary btn-sm" id="login-btn" type="button">Entrar</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Aviso de retorno do Stripe Checkout (preenchido por checkout.js) -->
+    <div class="container"><div class="notice" id="purchase-notice" hidden></div></div>
+
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Novos e lacrados · Multimarcas</p>
+        <h1>O smartphone certo, sem achismo.</h1>
+        <p class="hero-sub">
+          Compare modelos das principais marcas e descubra qual combina com o seu
+          orçamento e o seu jeito de usar o celular.
+        </p>
+        <a class="btn btn-primary" href="#ia">Encontre o smartphone ideal</a>
+      </div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="container">
+        <div class="section-head">
+          <h2>Smartphones disponíveis</h2>
+          <p>Seleção de aparelhos novos, com garantia e nota fiscal.</p>
+        </div>
+        <div class="grid" id="product-grid"><!-- preenchido por app.js --></div>
+      </div>
+    </section>
+
+    <section class="section ai-section" id="ia">
+      <div class="container">
+        <div class="ai-card">
+          <div class="ai-head">
+            <span class="badge">Inteligência artificial</span>
+            <h2>Encontre o smartphone ideal</h2>
+            <p>
+              Diga quanto você quer gastar e o que mais importa no seu dia a dia.
+              A IA analisa o catálogo e indica o modelo com melhor encaixe.
+            </p>
+          </div>
+
+          <form class="ai-form" id="ai-form" novalidate>
+            <div class="field">
+              <label for="budget">Orçamento máximo</label>
+              <div class="input-money">
+                <span>R$</span>
+                <input
+                  type="number"
+                  id="budget"
+                  name="budget"
+                  min="500"
+                  step="100"
+                  placeholder="3.000"
+                  required
+                />
+              </div>
+              <p class="error" id="budget-error" hidden>Informe um orçamento válido.</p>
+            </div>
+
+            <div class="field">
+              <label>Principal prioridade de uso</label>
+              <div class="chips" id="priority-chips">
+                <label class="chip">
+                  <input type="radio" name="priority" value="camera" required />
+                  <span>Câmera</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="priority" value="bateria" />
+                  <span>Bateria</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="priority" value="jogos" />
+                  <span>Jogos</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="priority" value="trabalho" />
+                  <span>Trabalho</span>
+                </label>
+              </div>
+              <p class="error" id="priority-error" hidden>Escolha uma prioridade.</p>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit" id="submit-btn">
+              Encontrar meu smartphone
+            </button>
+          </form>
+
+          <!-- Área reservada para a recomendação gerada por IA -->
+          <div class="ai-result" id="ai-result" aria-live="polite">
+            <div class="ai-result-empty">
+              <p>Preencha os campos acima para receber uma recomendação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Celum · Projeto acadêmico de demonstração. Preços e produtos ilustrativos.</p>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>
