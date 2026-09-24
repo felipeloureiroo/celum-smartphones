@@ -21,8 +21,9 @@ function productCard(p) {
   const card = document.createElement('article');
   card.className = 'card';
   card.innerHTML = `
-    <div class="card-media" style="background: linear-gradient(140deg, ${p.theme.from}, ${p.theme.to});">
-      <div class="phone-shape"></div>
+    <div class="card-media" role="img" aria-label="Ilustração do ${p.brand} ${p.model}"
+         style="background: linear-gradient(140deg, ${p.theme.from}, ${p.theme.to});">
+      <div class="phone-shape" aria-hidden="true"></div>
     </div>
     <div class="card-body">
       <span class="card-brand">${p.brand}</span>

@@ -1,0 +1,9 @@
+# Celum
+
+> Encontre o smartphone ideal para suas necessidades e orçamento comparando modelos disponíveis na Celum.
+
+Celum é uma aplicação web para comparar smartphones e ajudar o usuário a escolher um aparelho de acordo com suas necessidades e orçamento. O catálogo pode ser acessado pelo navegador. O checkout é demonstrativo e utiliza Stripe em ambiente de teste.
+
+## Páginas
+
+- [Início](https://celum-smartphones.onrender.com/): catálogo de smartphones e acesso à ferramenta de escolha.
