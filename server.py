@@ -362,6 +362,12 @@ def create_checkout_session(product, origin):
 
 
 class Handler(SimpleHTTPRequestHandler):
+    # Sem "charset=utf-8" o navegador lê .txt como Latin-1 e quebra os acentos.
+    extensions_map = {
+        **SimpleHTTPRequestHandler.extensions_map,
+        ".txt": "text/plain; charset=utf-8",
+    }
+
     def end_headers(self):
         # Evita cache durante o desenvolvimento.
         self.send_header("Cache-Control", "no-store")
