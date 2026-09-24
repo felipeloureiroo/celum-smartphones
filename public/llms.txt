@@ -1,8 +1,8 @@
-# Celum
+# Compra Certa
 
-> Encontre o smartphone ideal para suas necessidades e orçamento comparando modelos disponíveis na Celum.
+> Encontre o smartphone ideal para suas necessidades e orçamento comparando modelos disponíveis na Compra Certa.
 
-Celum é uma aplicação web para comparar smartphones e ajudar o usuário a escolher um aparelho de acordo com suas necessidades e orçamento. Serve a quem vai trocar de celular e não sabe qual modelo escolher: o usuário informa quanto pretende gastar e qual é sua prioridade de uso (câmera, bateria, jogos ou trabalho), e a ferramenta de inteligência artificial indica um aparelho do catálogo. O catálogo pode ser acessado pelo navegador. O checkout é demonstrativo e utiliza Stripe em ambiente de teste.
+A Compra Certa é uma aplicação web para comparar smartphones e ajudar o usuário a escolher um aparelho de acordo com suas necessidades e orçamento. Serve a quem vai trocar de celular e não sabe qual modelo escolher: o usuário informa quanto pretende gastar e qual é sua prioridade de uso (câmera, bateria, jogos ou trabalho), e a ferramenta de inteligência artificial indica um aparelho do catálogo. O catálogo pode ser acessado pelo navegador. O checkout é demonstrativo e utiliza Stripe em ambiente de teste.
 
 ## Páginas
 
@@ -10,6 +10,6 @@ Celum é uma aplicação web para comparar smartphones e ajudar o usuário a esc
 
 ## Limitações
 
-- Preço: a Celum é uma demonstração acadêmica e não realiza vendas reais. Os preços exibidos são ilustrativos e não representam ofertas comerciais.
+- Preço: a Compra Certa é uma demonstração acadêmica e não realiza vendas reais. Os preços exibidos são ilustrativos e não representam ofertas comerciais.
 - Catálogo: limitado aos 6 smartphones cadastrados no projeto (Apple, Samsung, Google, Motorola, Xiaomi e Realme). Não há integração com estoque, fornecedores ou outras lojas, e nenhum outro aparelho pode ser recomendado ou comprado.
 - O que não faz: não vende, não entrega e não cobra de ninguém. O checkout utiliza o Stripe apenas em ambiente de teste, aceitando somente cartões de teste — nenhum pagamento real é processado.
