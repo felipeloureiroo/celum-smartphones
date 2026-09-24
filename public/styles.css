@@ -154,28 +154,19 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; margin: 0; }
 }
 .card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
 
-/* Placeholder visual do produto (sem imagem externa) */
+/* Foto do produto */
 .card-media {
   height: 180px;
   display: grid;
   place-items: center;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
 }
-.phone-shape {
-  width: 74px;
-  height: 132px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 2px solid rgba(255, 255, 255, 0.45);
-  position: relative;
-}
-.phone-shape::before {
-  content: "";
-  position: absolute;
-  top: 8px; left: 50%;
-  transform: translateX(-50%);
-  width: 24px; height: 4px;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.5);
+.card-media img {
+  max-height: 156px;
+  max-width: 70%;
+  width: auto;
+  object-fit: contain;
 }
 .card-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .card-brand {
